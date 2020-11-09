@@ -1,9 +1,10 @@
 //
-//  b2es8main.cpp
+//  b2es9main.cpp
 //  b2es8
 //
-//  Created by Roberto Ceola on 06/11/2020.
-//trova il piu grande
+//  Created by Roberto Ceola on 07/11/2020.
+//
+//trova i due numeri più grandi
 
 #include <iostream>
 using namespace std;
@@ -16,16 +17,19 @@ int main(){
     for(int i=0;i<N; i++){
         cin>>a[i];
     }
-    //cerco il massimo
-    int max;
+    //cerco i massimi
+    int max, max2;
     for(int i=0; i<N;i++){
         if(i==0){
             max=a[i];
+            max2=a[i];
         }
         else if(a[i]>max)
+            if(a[i]>max2)
+                max2=a[i];
             max=a[i];
-        cout<<"il massimo corrente è "<<max<<endl;      //visulazzo cosa accade
+        cout<<"il massimi corrente sono "<<max<<" e "<<max2<<endl;      //visulazzo cosa accade
     }
-    cout<<"il massimo è  "<<max<<endl;
+    cout<<"il massimi sono "<<max<<" e "<<max2<< endl;
     return 0;
 }
